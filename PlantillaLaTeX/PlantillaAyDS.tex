@@ -1,0 +1,209 @@
+\documentclass[12pt, letterpaper]{article}
+
+% --- PAQUETES PRINCIPALES ---
+\usepackage[T1]{fontenc}        
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{graphicx}           % Para incluir imágenes
+\usepackage{geometry}           % Para ajustar los márgenes del documento
+\usepackage{setspace}           % Para control del interlineado
+
+% --- CONFIGURACIÓN DE MÁRGENES ---
+\geometry{
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm
+}
+
+\begin{document}
+
+% ==========================================
+% 				   PORTADA
+% ==========================================
+\begin{titlepage}
+    \centering
+    
+% --- ENCABEZADO ---
+    \begin{minipage}[t]{0.25\textwidth}
+        \raggedright
+        \includegraphics[width=\linewidth, height=2.5cm, keepaspectratio]{ipn_logo.png}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.25\textwidth}
+        \raggedleft
+        \includegraphics[width=\linewidth, height=2.5cm, keepaspectratio]{escudo_ESCOM.png}
+    \end{minipage}
+    
+    \vspace{1.5cm}
+
+    % --- INSTITUCIÓN Y ESCUELA ---
+    {\Large \textbf{INSTITUTO POLITÉCNICO NACIONAL}}\\[0.3cm]
+    {\large \textbf{ESCUELA SUPERIOR DE CÓMPUTO}}\\[0.2cm]
+    {\large \textbf{Ingeniería en Inteligencia Artificial}}\\[1.5cm]
+
+    
+    {\Large \textbf{Análisis y Diseño de Sistemas}}\\[1.5cm]
+    
+    % --- ALUMNOS ---
+    {\normalsize \textbf{NOMBRE DE LOS ALUMNOS:}}\\[0.3cm]
+    {\large
+    \begin{tabular}{c}
+        Flores Olivares Omar \\
+        Flores González Carlos Enrique \\
+        Said Franco \\
+        Camacho Garcia Hanna Yazmin
+    \end{tabular}
+    }\\[1.5cm]
+    
+    % --- GRUPO ---
+    {\normalsize \textbf{GRUPO:}}\\[0.2cm]
+    {\large \textbf{4BV1}}\\[1.5cm]
+    
+    % --- PROYECTO ---
+    {\normalsize \textbf{NOMBRE DEL PROYECTO:}}\\[0.2cm]
+    {\huge \textbf{RAVE(Registro de Acceso Vehicular Escolar)}}\\[1cm]
+    
+    % --- FECHA Y MATERIA ---
+    {\small \textbf{Fecha:} \today} \\[1.0cm]
+    \vfill
+\end{titlepage}
+\tableofcontents
+% ==========================================
+% CONTENIDO DEL DOCUMENTO
+% ==========================================
+\newpage
+
+\section{\textbf{Planeación:}}
+\subsection{Propuesta:}
+//Aqui se describe la idea general del proyecto\\
+
+\subsection{Objetivo general:}
+//El proposito principal del proyecto\\
+
+\subsection{Objetivos específicos:}
+//Metas mas pequeñas que ayudan a cumplir el objetivo general\\
+
+\subsection{Metodología}
+//El método que usaremos para desarrollar el proyecto\\
+
+\subsection{Arquitectura del proyecto}
+//Aquí explicamos como se estructura el sistema\\
+
+\subsection{Diagrama de contexto}
+//Un dibujo o esquema que muestra el sistema y cómo interactúa con otros elementos externos (usuarios, bases de datos, hardware)\\
+
+\subsection{Cronograma}
+//Tabla con fechas para cada actividad (desarrollo, pruebas, entrega)\\
+
+\section{\textbf{Requerimientos}}
+\subsection{Carátula de versiones}
+//Registro de cambios hechos al documento\\
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    \textbf{Fecha}&\textbf{Versión}&\textbf{Descripción}&\textbf{Autor(es)}\\ \hline
+    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
+    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
+    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
+    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
+\end{tabular}
+
+\subsection{Visión del prducto}
+Para mejorar la seguridad de las motocicletas que ingresan en la Escuela superior de Cómputo (ESCOM) y apoyar al personal de seguridad encargado de supervisar sus accesos, (nombre) es un sistema que permitirá identificar a los estudiantes y verificar que las motocicletas que entran y salen correspondan con los registros almacenados. 
+
+El sistema utilizara un código de barras de la credencial institucional para obtener el número de boleta del estudiante y activara una cámara para capturar la matrícula de la motocicleta, almacenando la información de cada entrada y salida en una base de datos. 
+
+Asimismo, permitirá al personal de seguridad verificar los movimientos de las motocicletas y recibir alertas cuando un vehículo intente salir sin un registro de entrada previo o cuando su matrícula no coincida con la información registrada. A diferencia de los métodos tradicionales de registro manual utilizados en los accesos escolares.
+
+Nuestro producto integrará la identificación de estudiantes, el reconocimiento de matrículas y las alertas de seguridad en un solo sistema, ayudando a mejorar el control de acceso, reducir el trabajo manual y reforzar la seguridad de las motocicletas dentro del plantel. 
+
+\subsection{Requerimientos de software}
+\begin{itemize}
+    \item Requerimientos Funcionales(RF)
+        \begin{itemize}
+            \item RF-01 (Escaneo de credencial): El sistema debe capturar y decodificar el código de barras o código QR de la credencial institucional del alumno para extraer su número de boleta. 
+            \item RF-02 (Captura y OCR de matrícula): El sistema debe activar automáticamente la cámara al detectar un código válido, tomar una fotografía del vehículo y extraer la matrícula mediante un motor de OCR (Reconocimiento Óptico de Caracteres). 
+            \item RF-03 (Registro de acceso): El sistema debe almacenar en la base de datos la boleta delestudiante, la matrícula obtenida por OCR, la fecha, la marca de tiempo (timestamp) y el tipo de evento (Entrada o Salida). 
+            \item RF-04 (Validación cruzada en salida): Al momento de la salida, el sistema debe consultar el último registro de entrada asociado a la boleta y vericar que la matrícula procesada coincida con la registrada previamente. 
+            \item RF-05 (Activación de alertas): El sistema debe emitir una alerta sonora y visual en el panel del guardia si detecta discrepancias en las placas o si un vehículo intenta salir sin un registro previo de entrada. 
+            \item RF-06 (Anulación/Validación manual): El sistema debe permitir al guardia de seguridad revisar la fotografía capturada y autorizar o denegar el paso manualmente en caso de fallo en la lectura del OCR.  
+        \end{itemize}
+    \item Requerimientos No funcionales(RNF) 
+        \begin{itemize}
+            \item RNF-01 (Tiempo de respuesta / Rendimiento): El proceso completo de lectura del código, captura de imagen, procesamiento OCR y validación no debe demorar más de 2,5 segundos por vehículo para evitar congestión en el acceso. 
+            \item RNF-02 (Precisión del OCR): El algoritmo de reconocimiento óptico de caracteres debe tener un nivel de precisión mínimo del 90\% en la extracción correcta de las matrículas en condiciones normales de iluminación. 
+            \item RNF-03 (Disponibilidad): El sistema debe operar con una disponibilidad mínima del 99,5 \% durante el horario de atención del plantel (06:30 a 22:00 horas).
+            \item RNF-04 (Seguridad y Privacidad): Toda la información sensible (datos personales del alumno y fotografías) debe almacenarse siguiendo protocolos de cifrado y normativas de protección de datos de la institución.
+            \item RNF-05 (Usabilidad de la UI): La interfaz del guardia de seguridad debe ser intuitiva y permitir la resolución de una alerta en un máximo de tres clics.
+            \item RNF-06 (Tolerancia a fallos): En caso de pérdida de conexión con el servidor principal, el punto de control debe operar en un modo local temporal resguardando los eventos para su posterior sincronización. 
+        \end{itemize}
+\end{itemize}
+\subsection{Definición de Stakeholders:}
+
+\subsection{Definición de actores:}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Stakeholder}&\textbf{Interés}&\textbf{Impacto(1-10)}\\ \hline
+    Equipo de desarrollo& Diseñar, desarrollar, probar e implementar el software, asegurando el cumplimiento de los requerimientos funcionales, tiempos de respuesta (2.5 s), precisión del OCR (90\%) y reglas de negocio.& 10\\ \hline
+    Guardia de Seguridad/Policía de Acceso& Contar con un panel intuitivo que aligere el trabajo manual, emita alertas sonoras/visuales ante discrepancias y permita autorizar o denegar accesos manualmente de forma ágil (máximo 3 clics).& 9 \\ \hline
+    
+\end{tabular}
+
+\subsection{Reglas del negocio:}
+//Condiciones importantes
+Bussiness rules
+- BR123 The police officer must take action when the security system triggers an alert.
+    Name: Security Alert Police Action Requirement
+    Description: 
+\subsection{Gestión del proyecto:}
+//Cómo se organizarán, distribuirán tareas y supervisarán avances\\
+
+\section{\textbf{Modelo de análisis}}
+\subsection{Modelo de ambiente}
+//Describe el entorno donde funcionará el sistema\\
+
+\subsection{Modelo de contexto}
+//Simirlar al diagrama de contexto pero más detallado\\
+
+\subsection{Características de alto nivel del sistema}
+Funciones principales, como registro, búsqueda de datos, generación de reportes\\
+
+\subsection{Modelo CRC}
+//Clases, responsabilidades y colaboradores\\
+
+\subsection{Diccionario de datos}
+//Descripción de cada uno de los datos que utilizaremos para el sistema, por ejemplo: placa, foto, boleta, credencial, etc.\\
+
+\subsection{Especificación de requerimientos}
+//Requerimientos técnicos detallados\\
+
+\subsection{Modelo de comportamiento}
+//Diagramas, como diagramas de casos de uso, diagramas de clases o de secuencia que muestran como interactúan las partes.\\
+
+\subsection{Algoritmos}
+//Explicación de como se hara el reconocimiento de placas y el escaneo de códigos.\\
+
+\subsection{Flujo de navegación usando IU}
+//Cómo se movera el usuario dentro del sistema, los pasos para registrar entrada y salida\\
+
+\section{\textbf{Modelo de diseño}}
+\subsection{Definición del estilo arquitectónico}
+//Tipo de arquitectura del sistema (cliente-servidor, en capas, etc.)\\
+
+\subsection{Modelo de objetos}
+//Esquema de objetos que conformen el sistema\\
+
+\subsection{Modelo de robustez}
+//Cómo se maneja la interacción para evitar errores y asegurar el sistema\\
+\subsection{Modelo de intereacción/dinámico}
+Diagramas mostrando como los objetos colaboran en tiempo real\\
+\subsection{Clases de software}
+Especificación detallada de cada clase usada en el proyecto\\
+
+\subsection{Definición de componentes de software}
+//Partes independientes del sistema y cómo se comunican\\
+
+\subsection{Modelo de despliegue}
+//Cómo y dónde se instalará el sistema físicamente, qué dispositivos usarán\\
+
+\section{Implementación y Pruebas}
+\end{document}
