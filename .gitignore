@@ -1,0 +1,49 @@
+# TeX / LaTeX auxiliary and output files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.sbm
+*.sym
+*.synctex(archive)
+*.synctex.gz
+*.toc
+*.vrb
+
+# TeX Engine intermediate output files
+*.dvi
+*.xdv
+
+# Modern TeX distribution build directories
+/_minted-*/
+*.acn
+*.acr
+*.alg
+*.ent
+*.bbx
+*.cbx
+
+# PDF outputs (descomenta la siguiente línea si no deseas versionar los PDF generados)
+*.pdf
+
+# OS & Editor specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

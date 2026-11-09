@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.16)  9 NOV 2026 09:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.16)  9 NOV 2026 10:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/omarf/Desktop/AyDS/ADS/Documentacion/PlantillaLaTeX/PlantillaAyDS.tex
-(c:/Users/omarf/Desktop/AyDS/ADS/Documentacion/PlantillaLaTeX/PlantillaAyDS.tex
+**c:/Users/omarf/Desktop/AyDS/Proyecto-RAVE-borrador/PlantillaLaTeX/PlantillaAyDS.tex
+(c:/Users/omarf/Desktop/AyDS/Proyecto-RAVE-borrador/PlantillaLaTeX/PlantillaAyDS.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -25,6 +25,10 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \bibindent=\dimen150
 ) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
 ) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2026/04/15 v26.6 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count283
@@ -54,20 +58,20 @@ Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 4330.
  (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-\es@quottoks=\toks17
+\es@quottoks=\toks19
 \es@quotdepth=\count285
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 6.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 6.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 5.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 5.
  (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
+\KV@toks@=\toks20
 ) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
  (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
@@ -99,12 +103,37 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layoutheight=\dimen159
 \Gm@layouthoffset=\dimen160
 \Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks19
- (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
-Package: setspace 2022/12/04 v6.7b set line spacing
+\Gm@dimlist=\toks21
+ (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box53
+\extrarowheight=\dimen163
+\NC@list=\toks22
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+\TX@col@width=\dimen164
+\TX@old@table=\dimen165
+\TX@old@col=\dimen166
+\TX@target=\dimen167
+\TX@delta=\dimen168
+\TX@cols=\count289
+\TX@ftn=\toks23
+) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen169
+\enit@toks=\toks24
+\enit@inbox=\box55
+\enit@count@id=\count290
+\enitdp@description=\count291
 ) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count289
+\l__color_backend_stack_int=\count292
 ) (PlantillaAyDS.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
@@ -113,35 +142,35 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `PlantillaAyDS.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
  (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
-\scratchdimen=\dimen162
-\scratchbox=\box53
-\nofMPsegments=\count291
-\nofMParguments=\count292
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count293
-\MPscratchDim=\dimen163
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count293
+\scratchdimen=\dimen170
+\scratchbox=\box56
+\nofMPsegments=\count294
+\nofMParguments=\count295
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen171
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
+\everyMPtoPDFconversion=\toks26
 ) (C:\Users\omarf\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -185,17 +214,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 <ipn_logo.png, id=1, 3854.4pt x 2168.1pt>
 File: ipn_logo.png Graphic file (type png)
 <use ipn_logo.png>
-Package pdftex.def Info: ipn_logo.png  used on input line 29.
-(pdftex.def)             Requested size: 125.09595pt x 70.36647pt.
+Package pdftex.def Info: ipn_logo.png  used on input line 15.
+(pdftex.def)             Requested size: 71.13188pt x 39.99673pt.
 <escudo_ESCOM.png, id=2, 1927.2pt x 1084.05pt>
 File: escudo_ESCOM.png Graphic file (type png)
 <use escudo_ESCOM.png>
-Package pdftex.def Info: escudo_ESCOM.png  used on input line 34.
-(pdftex.def)             Requested size: 125.09595pt x 70.36647pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 50.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
+Package pdftex.def Info: escudo_ESCOM.png  used on input line 15.
+(pdftex.def)             Requested size: 71.13188pt x 39.99673pt.
 [1
 
 {C:/Users/omarf/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ipn_logo.png> <./escudo_ESCOM.png>] (PlantillaAyDS.toc
@@ -211,132 +236,47 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `PlantillaAyDS.toc'.
 
- [1]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
+ [1] [2] [3]
+Underfull \hbox (badness 1742) in paragraph at lines 89--89
+[]|\T1/cmr/m/n/12 Guardia de se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+[]|\T1/cmr/m/n/12 Estudiantes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+\T1/cmr/m/n/12 usua-rios de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+[]|\T1/cmr/m/n/12 Autoridades
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+\T1/cmr/m/n/12 y di-rec-ti-vos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
+Underfull \hbox (badness 8019) in paragraph at lines 89--89
+[]|\T1/cmr/m/n/12 Proveedores de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
-
- []
-
-[2] [3]
-Overfull \hbox (843.70433pt too wide) in paragraph at lines 143--150
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]|\T1/cmr/m/n/12 Dispositivo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
+Overfull \hbox (30.05435pt too wide) in paragraph at lines 98--98
+[]|\T1/cmr/m/n/12 Dispositivo/servicio| 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-[6] (PlantillaAyDS.aux
+[4] [5] [6] [7] (PlantillaAyDS.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -346,17 +286,17 @@ L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3659 strings out of 467691
- 59773 string characters out of 5414987
- 490990 words of memory out of 5000000
- 32703 multiletter control sequences out of 15000+600000
- 639433 words of font info for 63 fonts, out of 8000000 for 9000
+ 4096 strings out of 467691
+ 67240 string characters out of 5414987
+ 503416 words of memory out of 5000000
+ 33133 multiletter control sequences out of 15000+600000
+ 637315 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,443b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk>
-Output written on PlantillaAyDS.pdf (7 pages, 435317 bytes).
+ 57i,8n,65p,795b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\omarf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk>
+Output written on PlantillaAyDS.pdf (8 pages, 429815 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
+ 337 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
