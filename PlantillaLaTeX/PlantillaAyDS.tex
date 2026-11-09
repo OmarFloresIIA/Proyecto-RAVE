@@ -1,209 +1,145 @@
-\documentclass[12pt, letterpaper]{article}
-
-% --- PAQUETES PRINCIPALES ---
-\usepackage[T1]{fontenc}        
-\usepackage[spanish, es-tabla]{babel}
-\usepackage{graphicx}           % Para incluir imágenes
-\usepackage{geometry}           % Para ajustar los márgenes del documento
-\usepackage{setspace}           % Para control del interlineado
-
-% --- CONFIGURACIÓN DE MÁRGENES ---
-\geometry{
-    top=2cm,
-    bottom=2cm,
-    left=2cm,
-    right=2cm
-}
-
+\documentclass[12pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
 \begin{document}
-
-% ==========================================
-% 				   PORTADA
-% ==========================================
 \begin{titlepage}
-    \centering
-    
-% --- ENCABEZADO ---
-    \begin{minipage}[t]{0.25\textwidth}
-        \raggedright
-        \includegraphics[width=\linewidth, height=2.5cm, keepaspectratio]{ipn_logo.png}
-    \end{minipage}%
-    \hfill
-    \begin{minipage}[t]{0.25\textwidth}
-        \raggedleft
-        \includegraphics[width=\linewidth, height=2.5cm, keepaspectratio]{escudo_ESCOM.png}
-    \end{minipage}
-    
-    \vspace{1.5cm}
-
-    % --- INSTITUCIÓN Y ESCUELA ---
-    {\Large \textbf{INSTITUTO POLITÉCNICO NACIONAL}}\\[0.3cm]
-    {\large \textbf{ESCUELA SUPERIOR DE CÓMPUTO}}\\[0.2cm]
-    {\large \textbf{Ingeniería en Inteligencia Artificial}}\\[1.5cm]
-
-    
-    {\Large \textbf{Análisis y Diseño de Sistemas}}\\[1.5cm]
-    
-    % --- ALUMNOS ---
-    {\normalsize \textbf{NOMBRE DE LOS ALUMNOS:}}\\[0.3cm]
-    {\large
-    \begin{tabular}{c}
-        Flores Olivares Omar \\
-        Flores González Carlos Enrique \\
-        Said Franco \\
-        Camacho Garcia Hanna Yazmin
-    \end{tabular}
-    }\\[1.5cm]
-    
-    % --- GRUPO ---
-    {\normalsize \textbf{GRUPO:}}\\[0.2cm]
-    {\large \textbf{4BV1}}\\[1.5cm]
-    
-    % --- PROYECTO ---
-    {\normalsize \textbf{NOMBRE DEL PROYECTO:}}\\[0.2cm]
-    {\huge \textbf{RAVE(Registro de Acceso Vehicular Escolar)}}\\[1cm]
-    
-    % --- FECHA Y MATERIA ---
-    {\small \textbf{Fecha:} \today} \\[1.0cm]
-    \vfill
+\centering
+\includegraphics[width=2.5cm]{ipn_logo.png}\hfill\includegraphics[width=2.5cm]{escudo_ESCOM.png}
+\vspace{1cm}
+{\Large \textbf{INSTITUTO POLITÉCNICO NACIONAL}}\\
+{\large \textbf{ESCUELA SUPERIOR DE CÓMPUTO}}\\
+{\large Ingeniería en Inteligencia Artificial}\\[1cm]
+{\Large \textbf{Análisis y Diseño de Sistemas}}\\[1cm]
+Flores Olivares Omar\\ Flores González Carlos Enrique\\ Said Franco\\ Camacho Garcia Hanna Yazmin\\[1cm]
+Grupo 4BV1\\[1cm]
+{\huge \textbf{RAVE}}\\
+Registro de Acceso Vehicular Escolar\\[1cm]
+Fecha: \today
 \end{titlepage}
 \tableofcontents
-% ==========================================
-% CONTENIDO DEL DOCUMENTO
-% ==========================================
 \newpage
-
-\section{\textbf{Planeación:}}
-\subsection{Propuesta:}
-//Aqui se describe la idea general del proyecto\\
-
-\subsection{Objetivo general:}
-//El proposito principal del proyecto\\
-
-\subsection{Objetivos específicos:}
-//Metas mas pequeñas que ayudan a cumplir el objetivo general\\
-
+\section{Planeación}
+\subsection{Propuesta}
+RAVE es un sistema para apoyar el control de acceso de motocicletas en ESCOM. El estudiante presenta su credencial institucional ante un lector QR o de barras para obtener su número de boleta. Una cámara captura la motocicleta y un proceso OCR intenta reconocer su matrícula. El sistema registra los movimientos y, al salir, comprueba que exista una entrada previa asociada al estudiante y que la matrícula coincida. Ante inconsistencias o fallas de reconocimiento, el personal de seguridad revisa el caso y decide si autoriza o deniega el paso.
+\subsection{Objetivo general}
+Desarrollar un sistema de registro y control de acceso para las motocicletas que ingresan a ESCOM, con el fin de mejorar la seguridad, reducir el registro manual y facilitar la supervisión.
+\subsection{Objetivos específicos}
+\begin{enumerate}
+\item Leer el código QR o de barras de la credencial y obtener el número de boleta.
+\item Capturar imágenes de las motocicletas y procesarlas mediante OCR para reconocer sus matrículas.
+\item Almacenar número de boleta, matrícula, fecha, hora y tipo de evento.
+\item Validar la salida mediante una entrada previa y la comparación de la matrícula.
+\item Generar alertas visuales y sonoras ante discrepancias, salidas sin registro o fallas de reconocimiento.
+\item Permitir al personal de seguridad revisar incidencias y autorizar o denegar el paso.
+\item Permitir al administrador consultar y corregir registros.
+\end{enumerate}
 \subsection{Metodología}
-//El método que usaremos para desarrollar el proyecto\\
-
+El equipo eligió Scrum. El trabajo se organizará en sprints con planeación de actividades, distribución de tareas, desarrollo, revisión de resultados e identificación de mejoras para la siguiente iteración. La duración de los sprints y las responsabilidades concretas quedan pendientes de documentar conforme las acuerde el equipo.
 \subsection{Arquitectura del proyecto}
-//Aquí explicamos como se estructura el sistema\\
-
+\textit{Pendiente de definición durante análisis y diseño.}
 \subsection{Diagrama de contexto}
-//Un dibujo o esquema que muestra el sistema y cómo interactúa con otros elementos externos (usuarios, bases de datos, hardware)\\
-
+\textit{Pendiente. Insertar aquí el diagrama cuando se definan los límites del sistema y sus interacciones externas.}
 \subsection{Cronograma}
-//Tabla con fechas para cada actividad (desarrollo, pruebas, entrega)\\
-
-\section{\textbf{Requerimientos}}
+\textit{Pendiente de elaboración por el equipo.}
+\section{Requerimientos}
 \subsection{Carátula de versiones}
-//Registro de cambios hechos al documento\\
-\begin{tabular}{|c|c|c|c|}
-    \hline
-    \textbf{Fecha}&\textbf{Versión}&\textbf{Descripción}&\textbf{Autor(es)}\\ \hline
-    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
-    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
-    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
-    Fecha 1       & Version 1.0    & blablabla          & pedro picapiedra\\ \hline
-\end{tabular}
-
-\subsection{Visión del prducto}
-Para mejorar la seguridad de las motocicletas que ingresan en la Escuela superior de Cómputo (ESCOM) y apoyar al personal de seguridad encargado de supervisar sus accesos, (nombre) es un sistema que permitirá identificar a los estudiantes y verificar que las motocicletas que entran y salen correspondan con los registros almacenados. 
-
-El sistema utilizara un código de barras de la credencial institucional para obtener el número de boleta del estudiante y activara una cámara para capturar la matrícula de la motocicleta, almacenando la información de cada entrada y salida en una base de datos. 
-
-Asimismo, permitirá al personal de seguridad verificar los movimientos de las motocicletas y recibir alertas cuando un vehículo intente salir sin un registro de entrada previo o cuando su matrícula no coincida con la información registrada. A diferencia de los métodos tradicionales de registro manual utilizados en los accesos escolares.
-
-Nuestro producto integrará la identificación de estudiantes, el reconocimiento de matrículas y las alertas de seguridad en un solo sistema, ayudando a mejorar el control de acceso, reducir el trabajo manual y reforzar la seguridad de las motocicletas dentro del plantel. 
-
+\begin{tabularx}{\textwidth}{|c|c|X|X|}
+\hline Fecha & Versión & Descripción & Autor(es) \\ \hline
+\today & 0.1 & Integración inicial de planeación y requerimientos. & Equipo RAVE \\ \hline
+\end{tabularx}
+\subsection{Visión del producto}
+Para mejorar la seguridad de las motocicletas que ingresan en ESCOM y apoyar al personal de seguridad, RAVE permitirá identificar a los estudiantes y verificar que las motocicletas que entran y salen correspondan con los registros almacenados. Utilizará el código QR o de barras de la credencial institucional para obtener el número de boleta y una cámara para capturar la matrícula. La información de cada movimiento se almacenará en una base de datos. El personal de seguridad podrá verificar los movimientos y recibirá alertas ante salidas sin entrada previa o matrículas que no coincidan. El sistema busca reducir el trabajo manual y reforzar la seguridad dentro del plantel.
 \subsection{Requerimientos de software}
+\subsubsection{Requerimientos funcionales}
 \begin{itemize}
-    \item Requerimientos Funcionales(RF)
-        \begin{itemize}
-            \item RF-01 (Escaneo de credencial): El sistema debe capturar y decodificar el código de barras o código QR de la credencial institucional del alumno para extraer su número de boleta. 
-            \item RF-02 (Captura y OCR de matrícula): El sistema debe activar automáticamente la cámara al detectar un código válido, tomar una fotografía del vehículo y extraer la matrícula mediante un motor de OCR (Reconocimiento Óptico de Caracteres). 
-            \item RF-03 (Registro de acceso): El sistema debe almacenar en la base de datos la boleta delestudiante, la matrícula obtenida por OCR, la fecha, la marca de tiempo (timestamp) y el tipo de evento (Entrada o Salida). 
-            \item RF-04 (Validación cruzada en salida): Al momento de la salida, el sistema debe consultar el último registro de entrada asociado a la boleta y vericar que la matrícula procesada coincida con la registrada previamente. 
-            \item RF-05 (Activación de alertas): El sistema debe emitir una alerta sonora y visual en el panel del guardia si detecta discrepancias en las placas o si un vehículo intenta salir sin un registro previo de entrada. 
-            \item RF-06 (Anulación/Validación manual): El sistema debe permitir al guardia de seguridad revisar la fotografía capturada y autorizar o denegar el paso manualmente en caso de fallo en la lectura del OCR.  
-        \end{itemize}
-    \item Requerimientos No funcionales(RNF) 
-        \begin{itemize}
-            \item RNF-01 (Tiempo de respuesta / Rendimiento): El proceso completo de lectura del código, captura de imagen, procesamiento OCR y validación no debe demorar más de 2,5 segundos por vehículo para evitar congestión en el acceso. 
-            \item RNF-02 (Precisión del OCR): El algoritmo de reconocimiento óptico de caracteres debe tener un nivel de precisión mínimo del 90\% en la extracción correcta de las matrículas en condiciones normales de iluminación. 
-            \item RNF-03 (Disponibilidad): El sistema debe operar con una disponibilidad mínima del 99,5 \% durante el horario de atención del plantel (06:30 a 22:00 horas).
-            \item RNF-04 (Seguridad y Privacidad): Toda la información sensible (datos personales del alumno y fotografías) debe almacenarse siguiendo protocolos de cifrado y normativas de protección de datos de la institución.
-            \item RNF-05 (Usabilidad de la UI): La interfaz del guardia de seguridad debe ser intuitiva y permitir la resolución de una alerta en un máximo de tres clics.
-            \item RNF-06 (Tolerancia a fallos): En caso de pérdida de conexión con el servidor principal, el punto de control debe operar en un modo local temporal resguardando los eventos para su posterior sincronización. 
-        \end{itemize}
+\item \textbf{RF-01 Escaneo de credencial:} Capturar y decodificar el código QR o de barras de la credencial para extraer el número de boleta.
+\item \textbf{RF-02 Captura y OCR:} Al detectar un código válido, activar la cámara, tomar una fotografía y extraer la matrícula mediante OCR.
+\item \textbf{RF-03 Registro:} Almacenar número de boleta, matrícula, fecha, hora y tipo de evento (entrada o salida).
+\item \textbf{RF-04 Validación de salida:} Consultar la última entrada asociada a la boleta y verificar que la matrícula coincida.
+\item \textbf{RF-05 Alertas:} Emitir alertas sonoras y visuales ante discrepancias o salidas sin registro previo.
+\item \textbf{RF-06 Validación manual:} Permitir al personal de seguridad revisar la fotografía y autorizar o denegar el paso cuando exista una falla de OCR o sea necesaria una revisión.
 \end{itemize}
-\subsection{Definición de Stakeholders:}
-
-\subsection{Definición de actores:}
-\begin{tabular}{|c|c|c|}
-    \hline
-    \textbf{Stakeholder}&\textbf{Interés}&\textbf{Impacto(1-10)}\\ \hline
-    Equipo de desarrollo& Diseñar, desarrollar, probar e implementar el software, asegurando el cumplimiento de los requerimientos funcionales, tiempos de respuesta (2.5 s), precisión del OCR (90\%) y reglas de negocio.& 10\\ \hline
-    Guardia de Seguridad/Policía de Acceso& Contar con un panel intuitivo que aligere el trabajo manual, emita alertas sonoras/visuales ante discrepancias y permita autorizar o denegar accesos manualmente de forma ágil (máximo 3 clics).& 9 \\ \hline
-    
-\end{tabular}
-
-\subsection{Reglas del negocio:}
-//Condiciones importantes
-Bussiness rules
-- BR123 The police officer must take action when the security system triggers an alert.
-    Name: Security Alert Police Action Requirement
-    Description: 
-\subsection{Gestión del proyecto:}
-//Cómo se organizarán, distribuirán tareas y supervisarán avances\\
-
-\section{\textbf{Modelo de análisis}}
+\subsubsection{Requerimientos no funcionales}
+\begin{itemize}
+\item \textbf{RNF-01 Tiempo de respuesta:} El proceso de lectura, captura, OCR y validación no debe superar 2.5 segundos por motocicleta.
+\item \textbf{RNF-02 Precisión OCR:} Alcanzar al menos 90\% de precisión en condiciones normales de iluminación.
+\item \textbf{RNF-03 Disponibilidad:} Mantener 99.5\% de disponibilidad durante el horario de atención (06:30 a 22:00).
+\item \textbf{RNF-04 Seguridad y privacidad:} Proteger datos personales y fotografías conforme a las disposiciones aplicables en la institución.
+\item \textbf{RNF-05 Usabilidad:} Permitir resolver una alerta en un máximo de tres clics.
+\item \textbf{RNF-06 Tolerancia a fallos:} Operar temporalmente en modo local si se pierde conexión con el servidor y sincronizar los eventos al restablecerse.
+\end{itemize}
+\textit{Pendiente de precisar cómo se medirán tiempo de respuesta, precisión OCR y disponibilidad, así como el procedimiento de sincronización del modo local.}
+\subsection{Definición de stakeholders}
+\begin{tabularx}{\textwidth}{|p{3cm}|X|c|}
+\hline Stakeholder & Interés o participación & Impacto (1--10) \\ \hline
+Equipo de desarrollo & Diseñar, desarrollar, probar e implementar el sistema. & 10 \\ \hline
+Guardia de seguridad / policía de acceso & Supervisar movimientos, recibir alertas y resolver incidencias. & 9 \\ \hline
+Estudiantes usuarios de motocicleta & Contar con acceso ágil y registro adecuado de sus movimientos. & 8 \\ \hline
+Administrador / Área de TI & Consultar y corregir registros y apoyar el mantenimiento de la información. & 8 \\ \hline
+Autoridades y directivos ESCOM/IPN & Mejorar la seguridad y supervisión del acceso. & 9 \\ \hline
+Proveedores de hardware y OCR & Proporcionar o mantener dispositivos y servicios necesarios. & 5 \\ \hline
+\end{tabularx}
+\subsection{Definición de actores}
+\begin{tabularx}{\textwidth}{|p{2.8cm}|p{2.5cm}|X|}
+\hline Actor & Tipo & Interacción \\ \hline
+Estudiante & Humano & Presenta su credencial para iniciar el registro de entrada o salida. \\ \hline
+Guardia de seguridad & Humano & Supervisa movimientos, recibe alertas, revisa fotografías y autoriza o deniega manualmente. \\ \hline
+Administrador & Humano & Consulta información y corrige registros con los permisos correspondientes. \\ \hline
+Lector de credenciales & Dispositivo externo & Lee el código y envía el número de boleta. \\ \hline
+Cámara y OCR & Dispositivo/servicio & Captura la imagen y devuelve la matrícula reconocida. \\ \hline
+\end{tabularx}
+La base de datos se considera por ahora un elemento de almacenamiento de RAVE, no un actor humano. Su ubicación como componente interno o servicio externo se precisará al definir la arquitectura.
+\subsection{Reglas del negocio}
+\begin{itemize}
+\item \textbf{RN-01 Validación de salida:} Para registrar una salida debe existir una entrada previa asociada a la boleta y la matrícula debe coincidir. Si no existe entrada o la matrícula es diferente, se genera una alerta para el personal de seguridad.
+\item \textbf{RN-02 Atención de alertas:} Cuando se genere una alerta, el personal de seguridad debe revisar la situación y realizar la acción correspondiente.
+\item \textbf{RN-03 Registro de fecha y hora:} Cada movimiento debe incluir automáticamente la fecha y hora en que ocurrió.
+\item \textbf{RN-04 Intervención humana:} Cuando el reconocimiento automático no sea suficiente, una persona capacitada revisará el caso y determinará si autoriza o deniega el paso.
+\end{itemize}
+Estas reglas se organizaron a partir de las notas del equipo y deben confirmarse, especialmente el alcance de la intervención humana.
+\subsection{Gestión del proyecto}
+El equipo utilizará Scrum mediante sprints, planeación, asignación de tareas, seguimiento, revisión de resultados y mejora continua. Queda pendiente registrar responsables, duración de sprints, fechas de revisión y herramientas de seguimiento.
+\section{Modelo de análisis}
 \subsection{Modelo de ambiente}
-//Describe el entorno donde funcionará el sistema\\
-
+\textit{Pendiente de elaboración.}
 \subsection{Modelo de contexto}
-//Simirlar al diagrama de contexto pero más detallado\\
-
+\textit{Pendiente de elaboración.}
 \subsection{Características de alto nivel del sistema}
-Funciones principales, como registro, búsqueda de datos, generación de reportes\\
-
+\textit{Pendiente de elaboración a partir de los requerimientos aprobados.}
 \subsection{Modelo CRC}
-//Clases, responsabilidades y colaboradores\\
-
+\textit{Pendiente de identificar clases, responsabilidades y colaboradores.}
 \subsection{Diccionario de datos}
-//Descripción de cada uno de los datos que utilizaremos para el sistema, por ejemplo: placa, foto, boleta, credencial, etc.\\
-
+\textit{Pendiente de documentar los datos utilizados por el sistema.}
 \subsection{Especificación de requerimientos}
-//Requerimientos técnicos detallados\\
-
+\textit{Pendiente de detallar condiciones, entradas, salidas y criterios de aceptación.}
 \subsection{Modelo de comportamiento}
-//Diagramas, como diagramas de casos de uso, diagramas de clases o de secuencia que muestran como interactúan las partes.\\
-
+\textit{Pendiente de seleccionar e incorporar los diagramas correspondientes.}
 \subsection{Algoritmos}
-//Explicación de como se hara el reconocimiento de placas y el escaneo de códigos.\\
-
-\subsection{Flujo de navegación usando IU}
-//Cómo se movera el usuario dentro del sistema, los pasos para registrar entrada y salida\\
-
-\section{\textbf{Modelo de diseño}}
+\textit{Pendiente de documentar lectura de credenciales, OCR y validaciones.}
+\subsection{Flujo de navegación usando la interfaz de usuario}
+\textit{Pendiente de representar la navegación y resolución de incidencias.}
+\section{Modelo de diseño}
 \subsection{Definición del estilo arquitectónico}
-//Tipo de arquitectura del sistema (cliente-servidor, en capas, etc.)\\
-
+\textit{Pendiente de selección y justificación.}
 \subsection{Modelo de objetos}
-//Esquema de objetos que conformen el sistema\\
-
+\textit{Pendiente de elaboración.}
 \subsection{Modelo de robustez}
-//Cómo se maneja la interacción para evitar errores y asegurar el sistema\\
-\subsection{Modelo de intereacción/dinámico}
-Diagramas mostrando como los objetos colaboran en tiempo real\\
+\textit{Pendiente de elaboración.}
+\subsection{Modelo de interacción/dinámico}
+\textit{Pendiente de elaboración.}
 \subsection{Clases de software}
-Especificación detallada de cada clase usada en el proyecto\\
-
+\textit{Pendiente de especificar clases, atributos, operaciones y relaciones.}
 \subsection{Definición de componentes de software}
-//Partes independientes del sistema y cómo se comunican\\
-
+\textit{Pendiente de describir componentes y comunicación.}
 \subsection{Modelo de despliegue}
-//Cómo y dónde se instalará el sistema físicamente, qué dispositivos usarán\\
-
-\section{Implementación y Pruebas}
+\textit{Pendiente de representar la distribución física de componentes y dispositivos.}
+\section{Implementación y pruebas}
+\textit{Pendiente de documentar implementación, pruebas, datos de ejemplo, resultados y evidencias.}
 \end{document}
