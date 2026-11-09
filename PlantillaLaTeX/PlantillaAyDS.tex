@@ -7,9 +7,13 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{enumitem}
+\newcommand{\guia}[1]{\par\smallskip\noindent\textbf{Guía para el equipo (retirar antes de la entrega):} \textit{#1}\par\smallskip}
 \setlength{\parindent}{0pt}
 \geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
 \begin{document}
+% Esta versión incluye apuntes para orientar el trabajo del equipo.
+% Los textos identificados como "Guía para el equipo" son instrucciones,
+% no contenido final del proyecto. Revisarlos y retirarlos al cerrar cada apartado.
 \begin{titlepage}
 \centering
 \includegraphics[width=2.5cm]{ipn_logo.png}\hfill\includegraphics[width=2.5cm]{escudo_ESCOM.png}
@@ -27,11 +31,15 @@ Fecha: \today
 \tableofcontents
 \newpage
 \section{Planeación}
+\guia{En esta sección se explica cómo nace el proyecto, qué problema busca atender, qué objetivos persigue y cómo se organizará el trabajo. Debe permitir que alguien que no conoce RAVE entienda qué se quiere construir, por qué y bajo qué plan. No se describen todavía detalles técnicos que pertenezcan al análisis o al diseño.}
 \subsection{Propuesta}
+\guia{Presenten la idea general del producto en lenguaje claro: situación o problema observado, quién lo experimenta, qué solución propone el equipo y cuál será su alcance inicial. Expliquen el recorrido general de uso sin entrar en algoritmos ni tecnologías no acordadas. Para RAVE, describan el control de entradas y salidas de motocicletas en ESCOM.}
 RAVE es un sistema para apoyar el control de acceso de motocicletas en ESCOM. El estudiante presenta su credencial institucional ante un lector QR o de barras para obtener su número de boleta. Una cámara captura la motocicleta y un proceso OCR intenta reconocer su matrícula. El sistema registra los movimientos y, al salir, comprueba que exista una entrada previa asociada al estudiante y que la matrícula coincida. Ante inconsistencias o fallas de reconocimiento, el personal de seguridad revisa el caso y decide si autoriza o deniega el paso.
 \subsection{Objetivo general}
+\guia{Redacten un solo objetivo amplio que exprese el resultado principal que se busca alcanzar. Comienza con un verbo en infinitivo (por ejemplo, desarrollar, implementar o diseñar), menciona el producto o solución y el propósito. Debe ser coherente con la propuesta y alcanzable dentro del proyecto.}
 Desarrollar un sistema de registro y control de acceso para las motocicletas que ingresan a ESCOM, con el fin de mejorar la seguridad, reducir el registro manual y facilitar la supervisión.
 \subsection{Objetivos específicos}
+\guia{Desglosen el objetivo general en resultados concretos y verificables. Cada objetivo debe aportar a la construcción o validación del sistema; eviten repetir actividades como si fueran objetivos y no incluyan funciones que el equipo no haya acordado. Más adelante pueden relacionarse con requerimientos y entregables.}
 \begin{enumerate}
 \item Leer el código QR o de barras de la credencial y obtener el número de boleta.
 \item Capturar imágenes de las motocicletas y procesarlas mediante OCR para reconocer sus matrículas.
@@ -42,23 +50,32 @@ Desarrollar un sistema de registro y control de acceso para las motocicletas que
 \item Permitir al administrador consultar y corregir registros.
 \end{enumerate}
 \subsection{Metodología}
+\guia{Expliquen el enfoque de trabajo elegido y cómo lo aplicará el equipo. Como se eligió Scrum, documenten cómo organizarán los sprints, la planeación, el seguimiento, las revisiones y la mejora. Incluyan únicamente roles, reuniones, duración y acuerdos que realmente hayan definido; no basta con copiar una definición de Scrum.}
 El equipo eligió Scrum. El trabajo se organizará en sprints con planeación de actividades, distribución de tareas, desarrollo, revisión de resultados e identificación de mejoras para la siguiente iteración. La duración de los sprints y las responsabilidades concretas quedan pendientes de documentar conforme las acuerde el equipo.
 \subsection{Arquitectura del proyecto}
+\guia{Aquí se ofrece una vista preliminar de las partes principales de la solución y de cómo se relacionan. Identifiquen módulos o bloques funcionales (por ejemplo, lectura de credencial, captura/OCR, validación, interfaz y almacenamiento) y los intercambios de información entre ellos. Si todavía no se ha elegido una arquitectura técnica, indiquen que está pendiente; la decisión formal y su justificación se desarrollan en el Modelo de Diseño.}
 \textit{Pendiente de definición durante análisis y diseño.}
 \subsection{Diagrama de contexto}
+\guia{Dibujen el sistema como una unidad y alrededor coloquen las personas, organizaciones, dispositivos o servicios externos que interactúan con él. Nombren los intercambios de información mediante flechas. El diagrama debe aclarar qué está dentro del sistema y qué queda fuera; no es todavía un diagrama de clases ni un diagrama interno de módulos.}
 \textit{Pendiente. Insertar aquí el diagrama cuando se definan los límites del sistema y sus interacciones externas.}
 \subsection{Cronograma}
+\guia{Incluyan las actividades y entregas principales, fechas de inicio y término, responsables y dependencias cuando existan. Relacionen el calendario con los sprints y las fechas oficiales de la materia. Usen fechas acordadas por el equipo y actualicen el cronograma cuando cambie el plan.}
 \textit{Pendiente de elaboración por el equipo.}
 \section{Requerimientos}
+\guia{Esta sección establece qué necesita el usuario y qué debe ofrecer el sistema. Los requerimientos deben ser claros, necesarios, consistentes y comprobables. Mantengan identificadores únicos y eviten describir aquí decisiones de implementación que todavía no se han tomado. El documento de clase propone los artefactos de abajo, pero indica que se elija un estilo de documentación y se conserven solo las secciones que el equipo comprende y para las que tiene información.}
 \subsection{Carátula de versiones}
+\guia{Lleven un historial de cambios del documento y, cuando corresponda, de sus artefactos. Registren fecha, número de versión, descripción breve de lo que cambió y autores. No es una lista de tareas: debe permitir reconocer qué versión se revisó y qué modificaciones contiene.}
 \begin{tabularx}{\textwidth}{|c|c|X|X|}
 \hline Fecha & Versión & Descripción & Autor(es) \\ \hline
 \today & 0.1 & Integración inicial de planeación y requerimientos. & Equipo RAVE \\ \hline
 \end{tabularx}
 \subsection{Visión del producto}
+\guia{Resuman el producto desde la perspectiva de su propósito y de las personas que lo utilizarán. Expliquen para quién se construye, qué necesidad atiende, qué solución ofrece y cuál es su beneficio o diferencia principal. Una técnica auxiliar sugerida en clase es imaginar la caja del producto (Product Box): nombre, frase principal, beneficios y características destacadas. La visión no sustituye la lista detallada de requerimientos.}
 Para mejorar la seguridad de las motocicletas que ingresan en ESCOM y apoyar al personal de seguridad, RAVE permitirá identificar a los estudiantes y verificar que las motocicletas que entran y salen correspondan con los registros almacenados. Utilizará el código QR o de barras de la credencial institucional para obtener el número de boleta y una cámara para capturar la matrícula. La información de cada movimiento se almacenará en una base de datos. El personal de seguridad podrá verificar los movimientos y recibirá alertas ante salidas sin entrada previa o matrículas que no coincidan. El sistema busca reducir el trabajo manual y reforzar la seguridad dentro del plantel.
 \subsection{Requerimientos de software}
+\guia{Presenten la especificación de requerimientos de software (SRS): qué servicios debe ofrecer RAVE y qué condiciones debe cumplir. Incluyan RF y RNF con identificador, nombre y redacción verificable. Pueden elegir un formato de referencia, como IEEE 830, pero no tienen que llenar apartados cuyo propósito no entiendan o para los que no exista información. Si usan categorías adicionales de RNF, expliquen su criterio y mantengan una clasificación consistente.}
 \subsubsection{Requerimientos funcionales}
+\guia{Los RF describen acciones o servicios que el sistema debe realizar: entradas, procesamiento, consultas, registros, respuestas y excepciones. Redáctenlos con una estructura del tipo "El sistema debe...". Cada requerimiento debe expresar una sola necesidad principal, tener un identificador y poder comprobarse mediante una prueba o demostración. Eviten mezclar varios comportamientos en una sola frase.}
 \begin{itemize}
 \item \textbf{RF-01 Escaneo de credencial:} Capturar y decodificar el código QR o de barras de la credencial para extraer el número de boleta.
 \item \textbf{RF-02 Captura y OCR:} Al detectar un código válido, activar la cámara, tomar una fotografía y extraer la matrícula mediante OCR.
@@ -68,6 +85,7 @@ Para mejorar la seguridad de las motocicletas que ingresan en ESCOM y apoyar al 
 \item \textbf{RF-06 Validación manual:} Permitir al personal de seguridad revisar la fotografía y autorizar o denegar el paso cuando exista una falla de OCR o sea necesaria una revisión.
 \end{itemize}
 \subsubsection{Requerimientos no funcionales}
+\guia{Los RNF establecen cualidades o restricciones del sistema, por ejemplo rendimiento, disponibilidad, seguridad, usabilidad o tolerancia a fallos. No basta con palabras como rápido, seguro o fácil: indiquen una condición medible o una forma de comprobarla. Para cada RNF definan qué se mide, bajo qué condiciones, con qué método y cuál es el criterio de aceptación. No inventen métricas; acuerdenlas y justifiquenlas.}
 \begin{itemize}
 \item \textbf{RNF-01 Tiempo de respuesta:} El proceso de lectura, captura, OCR y validación no debe superar 2.5 segundos por motocicleta.
 \item \textbf{RNF-02 Precisión OCR:} Alcanzar al menos 90\% de precisión en condiciones normales de iluminación.
@@ -78,6 +96,7 @@ Para mejorar la seguridad de las motocicletas que ingresan en ESCOM y apoyar al 
 \end{itemize}
 \textit{Pendiente de precisar cómo se medirán tiempo de respuesta, precisión OCR y disponibilidad, así como el procedimiento de sincronización del modo local.}
 \subsection{Definición de stakeholders}
+\guia{Identifiquen personas, grupos u organizaciones que influyen en el proyecto, participan en él o pueden verse afectados por el sistema. Para cada stakeholder indiquen su interés, necesidades, participación o expectativas y, si la actividad lo pide, su nivel de influencia/impacto. No confundan stakeholder con actor: un stakeholder puede tener interés en el proyecto sin interactuar directamente con el software.}
 \begin{tabularx}{\textwidth}{|p{3cm}|X|c|}
 \hline Stakeholder & Interés o participación & Impacto (1--10) \\ \hline
 Equipo de desarrollo & Diseñar, desarrollar, probar e implementar el sistema. & 10 \\ \hline
@@ -88,6 +107,7 @@ Autoridades y directivos ESCOM/IPN & Mejorar la seguridad y supervisión del acc
 Proveedores de hardware y OCR & Proporcionar o mantener dispositivos y servicios necesarios. & 5 \\ \hline
 \end{tabularx}
 \subsection{Definición de actores}
+\guia{Identifiquen quién o qué interactúa directamente con el sistema desde fuera de su límite: personas, dispositivos u otros sistemas. Describan el objetivo de cada actor y sus interacciones. Decidan primero qué consideran parte de RAVE; por ejemplo, una base de datos interna normalmente se representa como componente y no como actor externo. Esta definición servirá para elaborar casos de uso y diagramas de contexto.}
 \begin{tabularx}{\textwidth}{|p{2.8cm}|p{2.5cm}|X|}
 \hline Actor & Tipo & Interacción \\ \hline
 Estudiante & Humano & Presenta su credencial para iniciar el registro de entrada o salida. \\ \hline
@@ -98,6 +118,7 @@ Cámara y OCR & Dispositivo/servicio & Captura la imagen y devuelve la matrícul
 \end{tabularx}
 La base de datos se considera por ahora un elemento de almacenamiento de RAVE, no un actor humano. Su ubicación como componente interno o servicio externo se precisará al definir la arquitectura.
 \subsection{Reglas del negocio}
+\guia{Documenten políticas, restricciones o condiciones propias del entorno de ESCOM que el sistema debe respetar, independientemente de cómo se programe. Para cada regla incluyan identificador, nombre, enunciado claro, motivo o fundamento, fuente/responsable y ejemplos o consecuencias cuando sea útil. La referencia de clase es el formato detallado de reglas de negocio de Scott Ambler. Distingan una regla del negocio de una función del sistema: la regla expresa la condición institucional; el RF describe cómo RAVE la aplica.}
 \begin{itemize}
 \item \textbf{RN-01 Validación de salida:} Para registrar una salida debe existir una entrada previa asociada a la boleta y la matrícula debe coincidir. Si no existe entrada o la matrícula es diferente, se genera una alerta para el personal de seguridad.
 \item \textbf{RN-02 Atención de alertas:} Cuando se genere una alerta, el personal de seguridad debe revisar la situación y realizar la acción correspondiente.
@@ -106,41 +127,74 @@ La base de datos se considera por ahora un elemento de almacenamiento de RAVE, n
 \end{itemize}
 Estas reglas se organizaron a partir de las notas del equipo y deben confirmarse, especialmente el alcance de la intervención humana.
 \subsection{Gestión del proyecto}
+\guia{Muestren cómo se gestionan y priorizan las necesidades y el trabajo. El material de clase sugiere un tablero de requerimientos y un Product Backlog. Incluyan elementos de trabajo, descripción, prioridad, estado y responsable cuando se haya asignado; pueden vincular cada elemento con RF/RNF o historias de usuario. Expliquen brevemente cómo el equipo actualiza el backlog y organiza el trabajo en Scrum.}
 El equipo utilizará Scrum mediante sprints, planeación, asignación de tareas, seguimiento, revisión de resultados y mejora continua. Queda pendiente registrar responsables, duración de sprints, fechas de revisión y herramientas de seguimiento.
 \section{Modelo de análisis}
+\guia{El análisis ayuda a comprender el problema y describir qué debe hacer el sistema antes de decidir en detalle cómo se construirá. Los modelos deben ser coherentes entre sí y con los requerimientos. Seleccionen las representaciones que correspondan al enfoque de desarrollo del equipo y expliquen las decisiones importantes.}
 \subsection{Modelo de ambiente}
+\guia{Representen el panorama general del entorno donde vive el sistema: organización, usuarios, sistemas vecinos, dispositivos, servicios y relaciones relevantes. El material de clase sugiere un System Landscape Diagram de C4Model. Para RAVE, sitúen el sistema en el contexto de ESCOM y muestren los elementos externos con los que se relaciona, sin entrar todavía al detalle de clases o código.}
 \textit{Pendiente de elaboración.}
 \subsection{Modelo de contexto}
+\guia{Delimiten el alcance del sistema y muestren las entidades externas que intercambian información con él. El documento de clase propone elegir la representación según el paradigma de desarrollo: por ejemplo, diagrama de contexto de C4Model, diagrama de contexto tradicional o diagrama de casos de uso. Elijan una opción, indiquen qué representa y mantengan los límites consistentes con los actores definidos en Requerimientos.}
 \textit{Pendiente de elaboración.}
 \subsection{Características de alto nivel del sistema}
+\guia{Presenten una vista resumida de las capacidades principales, sin detallar todavía cada paso interno. El material de clase permite elegir entre mapa de características, diagrama general de casos de uso o árbol de características. Seleccionen la opción que mejor comunique las funciones de RAVE y asegúrense de que las características se puedan relacionar con los requerimientos aprobados.}
 \textit{Pendiente de elaboración a partir de los requerimientos aprobados.}
 \subsection{Modelo CRC}
+\subsection{Modelo de Dominio}
+\guia{Representen los conceptos principales del problema y las relaciones entre ellos mediante un diagrama de clases UML del dominio. Incluyan clases conceptuales, atributos relevantes y asociaciones con multiplicidades cuando se conozcan. Este modelo describe el vocabulario y la estructura de información del problema; no debe confundirse todavía con las clases técnicas del software. El documento de clase indica utilizar un diagrama de clases UML.}
+\textit{Pendiente de elaboración.}
+\guia{CRC significa Clase--Responsabilidad--Colaborador. Elaboren tarjetas o una tabla para identificar clases candidatas, las responsabilidades que tendría cada una y las otras clases con las que colaboraría. Úsenlo para descubrir y discutir el dominio del problema; no lo conviertan prematuramente en una lista de clases de código. La referencia sugerida en clase es CRC Model Example de Agile Modeling/Scott Ambler.}
 \textit{Pendiente de identificar clases, responsabilidades y colaboradores.}
 \subsection{Diccionario de datos}
+\guia{Definan los datos importantes que aparecen en los requerimientos y modelos. Para cada dato incluyan nombre, significado, tipo o formato, restricciones, origen y, si aplica, valores permitidos y relación con otros datos. El diccionario puede refinarse conforme avance el diseño; mantengan consistencia en nombres como número de boleta, matrícula, fecha, hora y tipo de movimiento.}
 \textit{Pendiente de documentar los datos utilizados por el sistema.}
 \subsection{Especificación de requerimientos}
+\guia{Desarrollen los requerimientos con suficiente detalle para que puedan diseñarse, implementarse y probarse. Para RF, el material de clase sugiere texto de especificación de casos de uso, historias de usuario o slices, pruebas de aceptación, diseño de GUI y datos asociados al requerimiento; estos elementos pueden gestionarse directamente en la herramienta de seguimiento del equipo. Para RNF, incluyan definición y forma de medición/comprobación. No dupliquen información sin necesidad: vinculen cada especificación con su identificador original.}
 \textit{Pendiente de detallar condiciones, entradas, salidas y criterios de aceptación.}
 \subsection{Modelo de comportamiento}
+\guia{Describan cómo cambia el comportamiento del sistema durante un escenario. El material de clase sugiere diagramas de actividades UML para escenarios de casos de uso y máquinas de estados UML. Elijan el diagrama según la pregunta: actividades para mostrar el flujo de acciones y decisiones; estados para mostrar los estados posibles de un objeto o proceso y las transiciones que los conectan.}
 \textit{Pendiente de seleccionar e incorporar los diagramas correspondientes.}
 \subsection{Algoritmos}
+\guia{Expliquen la lógica de los procedimientos relevantes del sistema, sin depender todavía de un lenguaje de programación específico. Pueden utilizar diagrama de actividades, diagrama de flujo o pseudocódigo. En RAVE podrían documentarse, cuando estén definidos, el flujo de lectura de credencial, el reconocimiento de matrícula y la validación de entrada/salida. Incluyan entradas, pasos, decisiones, salidas y manejo de errores.}
 \textit{Pendiente de documentar lectura de credenciales, OCR y validaciones.}
 \subsection{Flujo de navegación usando la interfaz de usuario}
+\guia{Muestren cómo una persona recorre las pantallas para completar una tarea. El material de clase sugiere aplicar máquinas de estados a la navegación o elaborar un User Interface Flow Diagram/Storyboard. Incluyan pantallas o estados, acciones del usuario, transiciones, mensajes y caminos alternativos (por ejemplo, una alerta o un error de lectura). No es solo un dibujo de pantallas: debe mostrar cómo se pasa de una a otra.}
 \textit{Pendiente de representar la navegación y resolución de incidencias.}
 \section{Modelo de diseño}
+\guia{En diseño se transforma lo comprendido en el análisis en una propuesta de solución técnica. Aquí se decide cómo se organizarán los elementos de software y hardware, cómo colaborarán y dónde se ejecutarán. Cada decisión debe responder a requerimientos y restricciones del proyecto; justifiquen las elecciones y mantengan consistencia entre diagramas.}
 \subsection{Definición del estilo arquitectónico}
+\guia{Elijan y describan el estilo arquitectónico que mejor se ajuste a la naturaleza de RAVE y a las decisiones reales de desarrollo. Expliquen sus elementos principales, responsabilidades, comunicación, ventajas y limitaciones para este proyecto. El material de clase pide indicar un estilo de referencia y elaborar un diagrama de arquitectura. No seleccionen cliente-servidor, capas u otro estilo solo por ser conocido: relacionen la elección con los requerimientos.}
 \textit{Pendiente de selección y justificación.}
 \subsection{Modelo de objetos}
+\guia{Representen una instantánea de objetos concretos y los enlaces entre ellos en una situación particular. A diferencia del diagrama de clases, que describe tipos y relaciones generales, el modelo de objetos muestra ejemplos de instancias y valores en un momento determinado. La referencia de clase es el capítulo 4 de Análisis y Diseño Orientado a Objetos de Weitzenfeld.}
 \textit{Pendiente de elaboración.}
 \subsection{Modelo de robustez}
+\guia{Analicen cómo colaboran los elementos de una solución al ejecutar un caso de uso y comprueben que las responsabilidades estén bien distribuidas. En el análisis de robustez suelen distinguirse objetos de interfaz, control y entidad; conecten actores, pantallas, lógica de control y datos sin convertir el diagrama en código. Sigan el recurso Creating the Design Model Using Robustness Analysis y la parte indicada de Use Case Driven Object Modeling.}
 \textit{Pendiente de elaboración.}
 \subsection{Modelo de interacción/dinámico}
+\guia{Muestren los mensajes y el orden en que colaboran los objetos o componentes durante escenarios importantes. Según el material de clase, pueden convertir el análisis de robustez en diagramas UML de comunicación y secuencia, para el sistema general, objetos o escenarios; otra opción es un Dynamic Diagram de C4Model. Elijan una alternativa coherente y documenten los escenarios relevantes, no todos los casos imaginables.}
 \textit{Pendiente de elaboración.}
 \subsection{Clases de software}
+\guia{Describan las clases que forman parte de la solución de software, sus atributos, operaciones, relaciones y responsabilidades. El material de clase propone enfocarse en una parte significativa del sistema: pueden presentar un diagrama de clases de software o hacer zoom a nivel de código de un componente C4Model. Si el código ya existe, puede obtenerse el diagrama mediante ingeniería inversa con herramientas como Visual Paradigm o StarUML. Mantengan correspondencia con el modelo de dominio, pero distingan conceptos del problema de clases implementables.}
 \textit{Pendiente de especificar clases, atributos, operaciones y relaciones.}
 \subsection{Definición de componentes de software}
+\guia{Agrupen las responsabilidades implementadas en unidades de software y muestren qué ofrece cada componente y cómo se comunica con los demás. El material de clase propone diagramas UML de componentes, paquetes y clases, o un diagrama de componentes de C4Model. Indiquen interfaces o intercambios principales y relacionen los componentes con el estilo arquitectónico elegido.}
 \textit{Pendiente de describir componentes y comunicación.}
 \subsection{Modelo de despliegue}
+\guia{Muestren dónde se ejecutará físicamente cada parte de la solución: equipos, dispositivos, servidores, redes, contenedores o servicios, según corresponda. El material de clase propone dos rutas: C4Model (contenedores y componentes más despliegue) o UML (despliegue, componentes, paquetes y artefactos). Elijan la que se ajuste al proyecto y representen las conexiones necesarias para operar RAVE en el acceso escolar.}
 \textit{Pendiente de representar la distribución física de componentes y dispositivos.}
 \section{Implementación y pruebas}
+\guia{Esta etapa demuestra que la solución construida corresponde con lo especificado y que sus funciones principales trabajan correctamente. El documento de clase solicita evidencias de código, pruebas, repositorio y demostración del producto. Presenten resultados reales y reproducibles; distingan lo que ya está implementado de lo que continúa pendiente.}
 \textit{Pendiente de documentar implementación, pruebas, datos de ejemplo, resultados y evidencias.}
+\subsection{Código}
+\guia{Incluyan fragmentos o referencias a las clases y módulos implementados que sean más relevantes, complejos o representativos. Expliquen qué responsabilidad cumple cada parte y cómo se relaciona con el diseño. No es necesario pegar todo el repositorio en el reporte. El material de clase sugiere apoyar la explicación con el diagrama de clases de software o con una vista desde componentes hasta código.}
+\subsection{Pruebas}
+\guia{Describan qué se probó, con qué datos de entrada, qué resultado se esperaba y qué resultado se obtuvo. Prioricen las funciones más relevantes, complejas o poco claras. Incluyan pruebas de aceptación que demuestren escenarios completos desde la perspectiva del usuario. Reporten fallos encontrados y su estado; no inventen resultados ni presenten como exitosa una prueba que no se ejecutó.}
+\subsection{Repositorio de versiones}
+\guia{Agreguen el enlace al repositorio del equipo y verifiquen que la profesora tenga acceso de revisión. Expliquen brevemente cómo se organiza el código y dónde se encuentran los elementos importantes. El repositorio conserva el historial de versiones y evidencia el trabajo del equipo.}
+\subsection{Video-demo y capturas de interfaz}
+\guia{Preparen un video ejecutivo que muestre el producto funcionando y explique sus funciones principales. Según el documento de clase, la duración indicada es de 5 ± 2 minutos, las personas desarrolladoras deben aparecer con la cámara abierta y el video debe acompañarse de un máximo de 10 capturas de pantalla organizadas en diapositivas. El video sirve como apoyo para validar la implementación; muestren escenarios reales y eviten afirmar funciones que no estén implementadas.}
+\section{Referencias}
+\guia{Registren las fuentes utilizadas para fundamentar conceptos, técnicas, diagramas, estándares, herramientas o decisiones. Utilicen un estilo bibliográfico consistente y citen dentro del texto cuando retomen ideas ajenas. Si se utilizó una herramienta de IA en la elaboración de contenido, documenten su uso conforme a las indicaciones de la profesora; el material de clase advierte una penalización por utilizar IA sin referenciarla.}
 \end{document}
